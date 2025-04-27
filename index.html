@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Customer Churn Prediction</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', sans-serif;
+            background-color: #f4f6f8;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            max-width: 700px;
+            margin: 50px auto;
+            background-color: #ffffff;
+            padding: 30px 40px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+            border-radius: 12px;
+        }
+
+        h2 {
+            text-align: center;
+            color: #333;
+            margin-bottom: 20px;
+        }
+
+        form {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+        }
+
+        label {
+            font-weight: 600;
+            margin-bottom: 6px;
+            display: block;
+        }
+
+        input, select {
+            padding: 10px;
+            width: 100%;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            font-size: 14px;
+        }
+
+        .full-width {
+            grid-column: span 2;
+        }
+
+        .submit-btn {
+            background-color: #007bff;
+            color: white;
+            padding: 12px;
+            border: none;
+            border-radius: 8px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background 0.3s ease;
+        }
+
+        .submit-btn:hover {
+            background-color: #0056b3;
+        }
+
+        .result {
+            margin-top: 30px;
+            text-align: center;
+            font-size: 18px;
+            font-weight: bold;
+            color: green;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Customer Churn Prediction</h2>
+        <form method="POST">
+            <div>
+                <label for="CreditScore">Credit Score</label>
+                <input type="number" step="any" name="CreditScore" required>
+            </div>
+            <div>
+                <label for="Age">Age</label>
+                <input type="number" step="any" name="Age" required>
+            </div>
+            <div>
+                <label for="Tenure">Tenure</label>
+                <input type="number" step="any" name="Tenure" required>
+            </div>
+            <div>
+                <label for="Balance">Balance</label>
+                <input type="number" step="any" name="Balance" required>
+            </div>
+            <div>
+                <label for="NumOfProducts">Number of Products</label>
+                <input type="number" name="NumOfProducts" required>
+            </div>
+            <div>
+                <label for="HasCrCard">Has Credit Card (0 or 1)</label>
+                <input type="number" name="HasCrCard" required>
+            </div>
+            <div>
+                <label for="IsActiveMember">Is Active Member (0 or 1)</label>
+                <input type="number" name="IsActiveMember" required>
+            </div>
+            <div>
+                <label for="EstimatedSalary">Estimated Salary</label>
+                <input type="number" step="any" name="EstimatedSalary" required>
+            </div>
+            <div>
+                <label for="Geography">Geography</label>
+                <select name="Geography" required>
+                    <option value="Germany">Germany</option>
+                    <option value="Spain">Spain</option>
+                    <option value="France">France</option>
+                </select>
+            </div>
+            <div>
+                <label for="Gender">Gender</label>
+                <select name="Gender" required>
+                    <option value="Male">Male</option>
+                    <option value="Female">Female</option>
+                </select>
+            </div>
+            <div class="full-width">
+                <button type="submit" class="submit-btn">Predict</button>
+            </div>
+        </form>
+
+        {% if prediction %}
+            <div class="result">
+                Prediction: <span>{{ prediction }}</span>
+            </div>
+        {% endif %}
+    </div>
+</body>
+</html>

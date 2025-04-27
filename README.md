@@ -1,0 +1,14 @@
+# Customer Churn Prediction
+
+## Objective
+The goal of this project is to build a machine learning model that predicts whether a customer will churn (i.e., leave the service).  
+This helps businesses take action in advance and improve customer retention.
+
+## Dataset
+- The dataset used: `customer_churn.csv`
+- It contains customer information, usage behavior, and churn status.
+
+## Steps to Run the Project
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/sairajeswarreddy/customer_churn.git
