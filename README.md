@@ -12,3 +12,12 @@ This helps businesses take action in advance and improve customer retention.
 1. Clone the repository:
    ```bash
    git clone https://github.com/sairajeswarreddy/customer_churn.git
+
+
+Steps to do this project
+1.create venv
+2.install all required packages 
+3.project is running through flask application 
+4.run untitled.ipynd in jupyter notebook 
+5.run all cells
+6.In terminal run "python app.py"
