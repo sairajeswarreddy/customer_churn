@@ -21,3 +21,12 @@ Steps to do this project
 4.run untitled.ipynd in jupyter notebook 
 5.run all cells
 6.In terminal run "python app.py"
+
+Required packages
+1.Flask
+2.scikit-learn
+3.pandas
+4.Numpy
+5.Pickle
+6.Matplotlib
+
