@@ -1,0 +1,6 @@
+1.Flask
+2.scikit-learn
+3.pandas
+4.Numpy
+5.Pickle
+6.Matplotlib
